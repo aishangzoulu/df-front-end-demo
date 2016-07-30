@@ -80,7 +80,7 @@
             minWidth: 0,
 
 
-            ajaxUrlTemplate: 'example_data/page{{pno}}.json',
+            ajaxUrlTemplate: 'example_data/page{{pno}}.json?v=new',
 
             ajaxUrl: '',
             ajaxDataType: 'json',
@@ -104,7 +104,7 @@
             },
             template: function (imgData) {
                 var domStr = '<a href="javascript:void(0)">';
-                domStr += '<img onclick="openNewWin(\''+imgData.link+'\')" src="' + imgData.pic + '"/>';
+                domStr += '<img onclick="openNewWin(\''+imgData.link+'\')" src="' + imgData.pic+'"/>';
                 domStr += '<span onclick="showBigImg(\'' + imgData.pic + '\')">' + imgData.title + '</span>';
                 domStr += '</a>';
                 return domStr;
